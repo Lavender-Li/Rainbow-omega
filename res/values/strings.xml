@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Rainbow</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="complementary_intro">
+          This kind of color scheme chooses two opposite colors on the color wheel. It can create
+        high contrast and catch people\'s eye. To enrich the color scheme, one or more colors can be
+        chosen other than these two colors.
+    </string>
+    <string name="monochromatic_intro">
+          This kind of color scheme chooses several colors with the same hue and saturation as well as
+        different lightness on the color wheel. It is a kind of safe color matching since most people
+        will find it harmonious. It also needs to be noticed that it lacks contrast and is not that
+        noticeable.
+    </string>
+    <string name="analogous_intro">
+          This kind of color scheme chooses several colors with similar hue on the color wheel. It
+        can create the mood for the design, for example, red-orange-yellow creates the atmosphere of
+        warmness and autumn, and green-aqua-blue creates the mood of coolness and water. Besides, it
+        needs to be noticed that this color scheme also lacks contrast.
+    </string>
+    <string name="triadic_intro">
+          This kind of color scheme chooses three colors that are evenly-spaced and constructs a
+        triangle on the color wheel. It can create high contrast and is very noticeable. It\'s a
+        kind of color scheme giving people vivid feeling.
+    </string>
+<!--    <string name="select_a_color">-->
+<!--        Select a color...-->
+<!--    </string>-->
+</resources>
