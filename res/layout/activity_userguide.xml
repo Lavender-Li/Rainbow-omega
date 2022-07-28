@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Userguide">
+
+    <!--navbar-->
+    <LinearLayout
+        android:background="#4e97bb"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/ReturnButton"
+                android:text="  Guidance"
+                android:textColor="#303030"
+                android:textSize="30sp" />
+            <Button
+                android:id="@+id/ReturnButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/left_arrow"
+                android:onClick="startMain"/>
+            <Button
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="1dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/information"
+                android:onClick="startFeedback" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="When you open the app, you will see the main page at the first glance."
+                android:layout_margin="20dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="17sp"
+                android:lineSpacingMultiplier="1.25"
+                android:textColor="#000000" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+
+                    android:layout_marginRight="0dp"
+                    android:adjustViewBounds="true"
+                    android:focusable="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/mainpage" />
+
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:text="You can choose to \n· upload an image or \n· take a photo.\nThen we will recognize it."
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="After a picture is uploaded, the application will enter detection interface."
+                android:layout_margin="20dp"
+                android:layout_gravity="center_horizontal"
+                android:lineSpacingMultiplier="1.5"
+                android:textSize="17sp"
+                android:textColor="#000000" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:layout_marginRight="5dp"
+                    android:adjustViewBounds="true"
+                    android:focusable="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/detection1"/>
+
+
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="You can click on the picture and the app will tell you the color of the selected pixel which will be pointed out using the cross logo."
+                    android:textSize="17sp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:text="There are two modes:\n· Pixel detection mode will detect the color of the selected pixel.\n· Blob detection mode will circle out blobs with similar color of the pixel."
+                    android:textSize="17sp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:textColor="#000000"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:layout_marginLeft="5dp"
+                    android:adjustViewBounds="true"
+                    android:focusable="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/detection"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:layout_marginRight="5dp"
+                    android:adjustViewBounds="true"
+                    android:focusable="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/detection2"/>
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="There are also two libraries for detection:\n· Complex library shows a more specific color name.\n· Simple library shows a more common one."
+                    android:textSize="17sp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:text="You can then click the detail button on the bottom of the detection interface, and you will be directed to the detail page."
+                android:textColor="#000000"
+                android:lineSpacingMultiplier="1.5"
+                android:textSize="17sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:layout_marginRight="5dp"
+                    android:adjustViewBounds="true"
+                    android:focusable="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/detail"/>
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="The detail page shows where the color is on a HSL diagram and gives color matching advises, including complementary colors, monochromatic colors, analogous colors, and triadic colors."
+                    android:textSize="17sp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go back to the main page, and you will see a musical note on the top-right corner. What's the link between colors and music?"
+                android:layout_margin="20dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="17sp"
+                android:lineSpacingMultiplier="1.25"
+                android:textColor="#000000" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+
+                    android:layout_marginRight="0dp"
+                    android:adjustViewBounds="true"
+                    android:focusable="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/musicpage" />
+
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:text="Different colors represent different emotions. \nMusic is an effective way to convey emotions. \nWe provide 7 main colors, each of which is associated to one or more musical chords."
+                    android:textColor="#000000"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Also, if you click the &quot;i&quot; button on the top-right corner, you will enter &quot;About Us&quot; page."
+                android:layout_margin="20dp"
+                android:layout_gravity="center_horizontal"
+                android:textSize="17sp"
+                android:lineSpacingMultiplier="1.5"
+                android:textColor="#000000" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:layout_marginRight="5dp"
+                    android:adjustViewBounds="true"
+                    android:focusable="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/feedback"/>
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:text="The &quot;About Us&quot; page shows the members of our team and how to contact us if you have any problem or suggestion."
+                    android:textSize="17sp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:textColor="#000000"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!--    <Button-->
+    <!--        android:layout_width="80dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Return"-->
+    <!--        android:textSize="15sp"-->
+    <!--        android:onClick="startDetection"-->
+    <!--        android:background="#808080" />-->
+
+</LinearLayout>

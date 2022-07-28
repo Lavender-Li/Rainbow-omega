@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:maskimage="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ColorDetectionActivity">
+
+    <!--navbar-->
+    <LinearLayout
+        android:background="#4e97bb"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/ReturnButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/left_arrow"
+                android:onClick="startMain"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/ReturnButton"
+                android:text="  Color Detection"
+                android:textColor="#303030"
+                android:textSize="30sp" />
+            <Button
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="1dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/information"
+                android:onClick="startFeedback" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--btn for detection mode switch-->
+    <ToggleButton
+        android:id="@+id/mode_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/bt_change"
+        android:checked="false"
+        android:textOff="mode: pixel detection"
+        android:textOn="mode: blob detection"
+        android:padding="10dp"
+        android:textSize="20sp" />
+    <ToggleButton
+        android:id="@+id/library_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/bt_change"
+        android:checked="false"
+        android:textOff="color library: complex"
+        android:textOn="color library: simple"
+        android:padding="10dp"
+        android:textSize="20sp" />
+
+<!--    &lt;!&ndash;Image&ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/sample_img_view"-->
+<!--        android:layout_width="340dp"-->
+<!--        android:layout_height="300dp"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_marginHorizontal="30dp"-->
+<!--        android:layout_marginVertical="0dp"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        android:src="@drawable/paint"-->
+<!--        android:focusable="true"-->
+<!--        android:scaleType="fitCenter" />-->
+
+    <!--Masked image
+    -->
+    <com.example.testproject.MaskImageView
+        android:id="@+id/sample_img_view"
+        android:layout_width="340dp"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="0dp"
+        android:adjustViewBounds="true"
+        android:focusable="true"
+        android:scaleType="fitCenter"/>
+    <!--Information of color name & RGB-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            android:text="This color is: "
+            android:textColor="#000000"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/pixel_color_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:text="---"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        >
+        <TextView
+            android:id="@+id/pixel_r_value"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:text="R: ---"
+            android:textSize="20sp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:id="@+id/pixel_g_value"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:text="G: ---"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/pixel_b_value"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:text="B: ---"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!--two btns-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp"
+        >
+
+        <!--btn for detail-->
+        <Button
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="Detail"
+            android:background="@drawable/bt_change"
+            android:onClick="startDetail"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginHorizontal="10dp"
+            />
+
+        <!--btn for re-upload-->
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Re-upload"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/bt_change"
+            android:onClick="startMain"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            />
+
+    </LinearLayout>
+</LinearLayout>
