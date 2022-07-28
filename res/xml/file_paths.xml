@@ -1,0 +1,13 @@
+<paths>
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--files-path  相当于 getFilesDir（）-->
+    <files-path name="my_images" path="/data/user/0/com.example.testproject/files"/>
+    <!--cache-path  相当于 getCacheDir（）-->
+    <cache-path name="cache_images" path="/data/user/0/com.example.testproject/cache"/>
+    <!--external-path  相当于 Environment.getExternalStorageDirectory()-->
+    <external-path name="camera_images" path="/"/>
+    <!--external-files-path  相当于 getExternalFilesDir("") -->
+    <external-files-path name="external_files_images" path="/"/>
+    <!--external-cache-path  相当于 getExternalCacheDir（） -->
+    <external-cache-path  name="external_cache_images" path="/storage/emulated/0/Android/data/com.example.testproject/cache"/>
+</paths>
